@@ -1,0 +1,61 @@
+--------------------------------------------------------------------------------
+		            Paradigmas de Programación
+--------------------------------------------------------------------------------
+
+			     Mini-instructivo de Unix
+
+================================================================================
+ CONSEJO: Para abrir la terminal presione ctrl+alt+t.
+================================================================================
+
+|--------------|--------------------------------------------------|
+|    ls/dir    | Comando para listar lo que hay en el directorio. |
+|--------------+--------------------------------------------------|
+|     mkdir    | Comando para hacer un directorio.                |
+|--------------+--------------------------------------------------|
+|      cd      | Comando para cambiar de directorio.              |
+|--------------+--------------------------------------------------|
+|      pwd     | Comando para conocer el directorio actual.       |
+|--------------+--------------------------------------------------|
+|      rm      | Comando pata borrar un archivo.                  |
+|--------------+--------------------------------------------------|
+|     cd ..    | Mover al directorio anterior.                    |
+|--------------+--------------------------------------------------|
+| cd ../../../ | Mover tres directorios anteriores.               |
+|--------------|--------------------------------------------------|
+
+|                                                                          | | |
+ |                                                                          | | 
+| |                                                                          | |
+ | |                                                                          |
+| | |                     Mini-instructivo de vim                              |
+ | |                                                                          |
+| |                                                                          | |
+ |                                                                          | | 
+|                                                                          | | |
+
+En una terminal, nos desplazamos al directorio en donde queremos crear nuestro
+nuevo archivo.
+Con el comando vi seguido de un nombre y su correspondiente extención podemos
+abrir o crear archivos.
+
+/           \ /                                   \
+|  COMANDO  | |            Descripción            |
+\           / \                                   /
+---------------------------------------------------
+/           \ /                                   \
+|     i     | |  Insertar (editar)                |
+|   [esc]   | |  Salir del comando                |
+|     x     | |  Borrar                           |
+|     R     | |  Reemplazar                       |
+|    :wq    | |  Salir y guardar                  |
+|    :w     | |  Guardar                          |
+|    :q!    | |  Salir y no guardar nada          |
+|    :$     | |  Ir a la última línea             |
+|   :100    | |  Ir a la línea 100                |
+|     o     | |  Abre renglón abajo               |
+|     O     | |  Abre renglón arriba              |
+|    dd     | |  Borrar la línea donde estoy      |
+|  /palabra | |  Busca la palabra                 | 
+|     n     | |  Próxima aparición de la palabra  |
+\           / \                                   /
