@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.7) (preloaded format=pdflatex 2022.6.14)  30 AUG 2022 23:17
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.7) (preloaded format=pdflatex 2022.6.14)  30 AUG 2022 23:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1476,24 +1476,24 @@ Package csquotes Info: Redefining alias 'default' -> 'english'.
 (main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1550,18 +1550,18 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 (/usr/local/share/miktex-texmf/tex/latex/00miktex/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-Package hyperref Info: Link coloring ON on input line 9.
+Package hyperref Info: Link coloring ON on input line 14.
  (main.out) (main.out)
 \@outlinefile=\write5
 \openout5 = `main.out'.
 
 \c@lstlisting=\count417
-LaTeX Font Info:    Trying to load font information for U+msa on input line 12.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 17.
 
  (/usr/local/share/miktex-texmf/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 12.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 17.
 
 
 (/usr/local/share/miktex-texmf/tex/latex/amsfonts/umsb.fd
@@ -1570,8 +1570,8 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 <GitHub-Mark-120px-plus.png, id=50, 120.45pt x 120.45pt>
 File: GitHub-Mark-120px-plus.png Graphic file (type png)
 <use GitHub-Mark-120px-plus.png>
-Package pdftex.def Info: GitHub-Mark-120px-plus.png  used on input line 13.
-(pdftex.def)             Requested size: 120.45044pt x 120.45335pt.
+Package pdftex.def Info: GitHub-Mark-120px-plus.png  used on input line 17.
+(pdftex.def)             Requested size: 15.0563pt x 15.0562pt.
  [1
 Non-PDF special ignored!
 <special> header=pstricks.pro
@@ -1616,20 +1616,20 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: B8654FB0517C3A6635DDD9B15BDBEA75;786.
  ) 
 Here is how much of TeX's memory you used:
- 38861 strings out of 480549
- 765667 string characters out of 2895194
- 1344127 words of memory out of 3000000
- 55934 multiletter control sequences out of 15000+600000
- 478831 words of font info for 53 fonts, out of 8000000 for 9000
+ 38870 strings out of 480549
+ 765797 string characters out of 2895194
+ 1344143 words of memory out of 3000000
+ 55942 multiletter control sequences out of 15000+600000
+ 480785 words of font info for 61 fonts, out of 8000000 for 9000
  0 hyphenation exceptions out of 8191
- 88i,6n,114p,486b,1384s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 88i,10n,114p,486b,1384s stack positions out of 5000i,500n,10000p,200000b,80000s
  </home/porfiriodeh/.miktex/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/ec
 tt1000.pk> </home/porfiriodeh/.miktex/texmfs/data/fonts/pk/ljfour/jknappen/ec/d
 pi600/ecbx1440.pk> </home/porfiriodeh/.miktex/texmfs/data/fonts/pk/ljfour/jknap
 pen/ec/dpi600/ecrm1000.pk> </home/porfiriodeh/.miktex/texmfs/data/fonts/pk/ljfo
 ur/jknappen/ec/dpi600/ecrm1200.pk> </home/porfiriodeh/.miktex/texmfs/data/fonts
 /pk/ljfour/jknappen/ec/dpi600/ecrm1728.pk>
-Output written on main.pdf (3 pages, 85608 bytes).
+Output written on main.pdf (3 pages, 85441 bytes).
 PDF statistics:
  304 PDF objects out of 1000 (max. 8388607)
  30 named destinations out of 1000 (max. 500000)
