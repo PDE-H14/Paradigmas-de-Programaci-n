@@ -1,0 +1,24 @@
+\section{Subir archivos a un repositorio}
+	\begin{itemize}
+		\item[\textbf{\texttt{1.-}}] Abrir una terminal.
+		\item[\textbf{\texttt{2.-}}] Dirigirse a la carpeta del repositorio.
+		\item[\textbf{\texttt{3.-}}] Para agregar archivos al repositorio, deben estar en la misma carpeta, luego ingresamos el siguiente comando
+		\begin{lstlisting}[language=bash, caption= Ejemplo. Agregar un archivo]
+$ git add nombreDelArchivo.extension\end{lstlisting}
+		o si se desean agregar todos los archivos
+		\begin{lstlisting}[language=bash, caption= Ejemplo. Agregar todos los archivos]
+$ git add .\end{lstlisting}
+		\item[\textbf{\texttt{4.-}}] Para verificar los archivos que se van a subir se puede ejecutar el comando 
+		\begin{lstlisting}[language=bash, caption= Ejemplo. Estatus del almacenaje]
+$ git status\end{lstlisting}
+		\item[\textbf{\texttt{5.-}}] Ahora hay que ejecutar el siguiente comando, con una breve descripción de las novedades que se van a subir
+		\begin{lstlisting}[language=bash, caption= Ejemplo. Hacer commit]
+$ git commit -m "Breve Descripcion"\end{lstlisting}
+		\item[\textbf{\texttt{6.-}}] Finalmente, correr el comando 
+		\begin{lstlisting}[language=bash, caption= Ejemplo. Subir al repositorio]
+$ git push\end{lstlisting}
+		\item[\textbf{\texttt{7.-}}] Posteriormente, en dos pasos, ingresar el nombre de usuario y el Token que se generó. 
+		\begin{lstlisting}[language=bash, caption= Ejemplo. Subir al repositorio]       
+Username for 'https://github.com': nombreDeUsuario
+Password for 'https://user@github.com': token\end{lstlisting} 
+	\end{itemize}

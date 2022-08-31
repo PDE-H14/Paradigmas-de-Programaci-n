@@ -1,0 +1,388 @@
+\documentclass{article}
+
+\usepackage[spanish, english]{babel}
+
+\usepackage[letterpaper,top=2cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+
+\usepackage{graphicx}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+\usepackage[strict]{changepage}
+\usepackage{amsmath,amsthm,amssymb,amsfonts, color, comment, graphicx, environ}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{tcolorbox}
+\usepackage{mdframed}
+\usepackage{tikz}
+\usepackage{tkz-fct}
+\usetikzlibrary{calc,arrows,babel,shapes,spy,positioning,snakes}
+\usepackage{mathtools}
+\usepackage{physics}
+\usepackage{calligra}
+\usepackage{csquotes}
+\usepackage{tensor}
+\usepackage[thicklines]{cancel}
+\usepackage{pstricks}
+\usepackage{fancyhdr}
+\usepackage{multicol}
+\usepackage{float}
+\usepackage[shortlabels]{enumitem}
+\usepackage{indentfirst}
+\usepackage{hyperref}
+\hypersetup{
+	colorlinks=true,
+	linkcolor=blue,
+	filecolor=magenta,      
+	urlcolor=blue,
+}
+\usepackage[T1]{fontenc}
+\usepackage{titlesec}
+
+%%%%%%%%%%%%%%%%%%%% Colores %%%%%%%%%%%%%%%%%%%%
+
+%%%%% COLORES PASTEL %%%%%
+\definecolor{moradopastel}{RGB}{213,201,255}
+\definecolor{rosapastel}{RGB}{254,202,202}
+\definecolor{azulpastel}{RGB}{217,238,251}
+\definecolor{verdepastel}{RGB}{204,252,220}
+\definecolor{rojopastel}{RGB}{255,109,109}
+%%%%% COLORES PASTEL %%%%%
+
+%%%%% GRISES %%%%%
+\definecolor{grisclaro}{RGB}{247, 249, 249}
+\definecolor{grisclaro2}{RGB}{240, 243, 244}
+\definecolor{gris}{RGB}{191, 201, 202}
+%%%%% GRISES %%%%%
+
+%%%%% HTML page %%%%%
+\definecolor{IndianRed}{RGB}{205, 92, 92}
+\definecolor{LightCoral}{RGB}{240, 128, 128}
+\definecolor{Salmon}{RGB}{250, 128, 114}
+\definecolor{DarkSalmon}{RGB}{233, 150, 122}
+\definecolor{LightSalmon}{RGB}{255, 160, 122}
+%%%%% HTML page %%%%%
+
+%%%%% MIS COLORES %%%%%
+\definecolor{Rojop}{RGB}{203, 67, 53}
+\definecolor{Azulp}{RGB}{41, 128, 185}
+\definecolor{Verdep}{RGB}{20, 120, 100}
+\definecolor{Amarillop}{RGB}{255, 187,0}
+\definecolor{Naranjap}{RGB}{230, 126, 34}
+\definecolor{Moradop}{RGB}{108, 99, 255}
+\definecolor{Blancop}{RGB}{254, 254, 254}
+\definecolor{Negrop}{RGB}{0,0,0}
+\definecolor{Cyanp}{RGB}{118, 215, 196}
+\definecolor{Olivop}{RGB}{20, 90, 50}
+%%%%% MIS COLORES %%%%%
+
+%%%%%%%%%% CODING COLORS %%%%%%%%%%
+\definecolor{backgroundcolorgray}{RGB}{61,61,61}
+\definecolor{codeYellow}{RGB}{255,216,61}
+\definecolor{codeWhite}{RGB}{235,235,235}
+\definecolor{codePink}{RGB}{255,0,235}
+\definecolor{codeCyan}{RGB}{0,255,255}
+\definecolor{codeRed}{RGB}{255,0,55}
+%%%%%%%%%% CODING COLORS %%%%%%%%%%
+%%%%%%%%%% BASH COLORS %%%%%%%%%%
+\definecolor{BASHbackgroundcolor}{RGB}{99,0,39}
+\definecolor{BASHgreen}{RGB}{0,140,10}
+\definecolor{BASHwhite}{RGB}{245,245,245}
+\definecolor{BASHblue}{RGB}{0,125,255}
+\definecolor{BASHyellow}{RGB}{255,245,0}
+\definecolor{BASHred}{RGB}{200,40,40}
+%%%%%%%%%% BASH COLORS %%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%% Colores %%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%% Comandos renovados %%%%%%%%%%%%%%%%%%%%
+
+\renewcommand{\qed}{\quad\qedsymbol}
+\renewcommand{\qed}{\quad\qedsymbol}
+\renewcommand{\theenumi}{\alph{enumi})}
+
+%%%%%%%%%%%%%%%%%%%% Comandos renovados %%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%% Nuevos comandos %%%%%%%%%%%%%%%%%%%%
+\newcommand{\scriptr}{\mathcalligra{r}\,}
+\newcommand{\boldscriptr}{\pmb{\mathcalligra{r}}\,}
+\newcommand{\ie}{\emph{i.e.}} %id est
+\newcommand{\eg}{\emph{e.g.}} %exempli gratia
+\newcommand{\rtd}[1]{\ensuremath{\left\lfloor #1 \right\rfloor}}
+\newcommand{\dirac}[1]{\ensuremath{\delta \left( #1 \right)}}
+\newcommand{\diract}[1]{\ensuremath{\delta^3 \left( #1 \right)}}
+\newcommand{\e}{\ensuremath{\epsilon_0}}
+\newcommand{\m}{\ensuremath{\mu_0}}
+\newcommand{\V}{\ensuremath{\mathcal{V}}}
+\newcommand{\prnt}[1]{\ensuremath{\left(#1\right)}} %parentheses
+\newcommand{\colch}[1]{\ensuremath{\left[#1\right]}} %square brackets
+\newcommand{\chave}[1]{\ensuremath{\left\{#1\right\}}}  %curly brackets
+\newcommand{\hlight}[1]{\colorbox{violet!50}{#1}}
+\newcommand{\hlighta}[1]{\colorbox{red!50}{#1}}
+
+\newcommand{\ai}{\'{\i}}
+
+\newcommand{\R}{\mathbb{R} }
+\newcommand{\N}{\mathbb{N} }
+\newcommand{\Q}{\mathbb{Q} }
+\newcommand{\Z}{\mathbb{Z} }
+\newcommand{\I}{\mathbb{I} }
+\newcommand{\subSpace}{\textbf{W}}
+\newcommand{\spn}[1]{\operatorname{\texttt{span}}\left(#1\right)}
+\newcommand{\gen}[1]{\operatorname{\texttt{gen}}\left(#1\right)}
+\newcommand{\field}{\mathbb{F} }
+\newcommand{\vectorSpace}{\textbf{V} }
+\newcommand{\Zx}[1]{\mathbb{R}_{#1} }
+\renewcommand{\qed}{\quad\qedsymbol}
+\newcommand{\mcd}[2]{$\operatorname{mcd}\left(#1,#2\right)$}
+\newcommand{\tituloS}[1]{\textbf{#1}\newline}
+\newcommand{\coma}{,\:}
+\newcommand{\y}{\:y\:}
+%\newcommand{\op}{$\:o\:$}
+
+%%%%%%%%%%%%%%%%%%%% Nuevos comandos %%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%% Entornos %%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%% Problema %%%%%%%%%%%%%%%
+\newcounter{problem}[section]\setcounter{problem}{0}
+\renewcommand{\theproblem}{\textcolor{Blancop}{\thesection.\arabic{problem}}}
+\newenvironment{problem}[2][]{%
+	\refstepcounter{problem}%
+	\ifstrempty{#2}%
+	{\mdfsetup{%
+			frametitle={%
+				\tikz[baseline=(current bounding box.east),outer sep=0pt]
+				\node[anchor=east,rectangle,fill=IndianRed]
+				{\strut \textcolor{Blancop}{Problema}~\theproblem};}}
+	}%
+	{\mdfsetup{%
+			frametitle={%
+				\tikz[baseline=(current bounding box.east),outer sep=0pt]
+				%\node[anchor=east,rectangle,fill=IndianRed]
+				{\strut \textcolor{Blancop}{Problema}~\theproblem:~#2};}}%
+	}%
+	\mdfsetup{innertopmargin=10pt,linecolor=IndianRed,%
+		linewidth=3pt,topline=true,bottomline=false,leftline=false,rightline=false,%
+		frametitleaboveskip=\dimexpr-\ht\strutbox\relax
+	}
+	\begin{mdframed}[]\relax%
+		\label{#2}}{\end{mdframed}}
+%%%%%%%%%%%%%%%% Problema %%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%% Definición %%%%%%%%%%%%%%%
+\newcounter{definition}[section]\setcounter{definition}{0}
+\renewcommand{\thedefinition}{\textcolor{Blancop}{\thesection.\arabic{definition}}}
+\newenvironment{definition}[2][]{%
+	\refstepcounter{definition}%
+	\ifstrempty{#2}%
+	{\mdfsetup{%
+			frametitle={%
+				\tikz[baseline=(current bounding box.east),outer sep=0pt]
+				\node[anchor=east,rectangle,fill=Cyanp]
+				{\strut \textcolor{Blancop}{Definición~\thedefinition}};}}
+	}%
+	{\mdfsetup{%
+			frametitle={%
+				\tikz[baseline=(current bounding box.east),outer sep=0pt]
+				\node[anchor=east,rectangle,fill=Cyanp]
+				{\strut \textcolor{Blancop}{Definición~\thedefinition:~#2}};}}%
+	}%
+	\mdfsetup{innertopmargin=10pt,linecolor=Cyanp,%
+		linewidth=3pt,topline=true,bottomline=false,leftline=false,rightline=false,%
+		frametitleaboveskip=\dimexpr-\ht\strutbox\relax
+	}
+	\begin{mdframed}[]\relax%
+		\label{#2}}{\end{mdframed}}
+%%%%%%%%%%%%%%%% Definición %%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%% Teorema %%%%%%%%%%%%%%%
+\newcounter{theorem}[section]\setcounter{theorem}{0}
+\renewcommand{\thetheorem}{\textcolor{Blancop}{\thesection.\arabic{theorem}}}
+\newenvironment{theorem}[2][]{%
+	\refstepcounter{theorem}%
+	\ifstrempty{#2}%
+	{\mdfsetup{%
+			frametitle={%
+				\tikz[baseline=(current bounding box.east),outer sep=0pt]
+				\node[anchor=east,rectangle,fill=Verdep]
+				{\strut \textcolor{Blancop}{Teorema~\thetheorem}};}}
+	}%
+	{\mdfsetup{%
+			frametitle={%
+				\tikz[baseline=(current bounding box.east),outer sep=0pt]
+				\node[anchor=east,rectangle,fill=Verdep]
+				{\strut \textcolor{Blancop}{Teorema~\thetheorem:~#2}};}}%
+	}%
+	\mdfsetup{innertopmargin=10pt,linecolor=Verdep,%
+		linewidth=3pt,topline=true,bottomline=false,leftline=false,rightline=false,%
+		frametitleaboveskip=\dimexpr-\ht\strutbox\relax
+	}
+	\begin{mdframed}[]\relax%
+		\label{#2}}{\end{mdframed}}
+%%%%%%%%%%%%%%%% Teorema %%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%% Corolario %%%%%%%%%%%%%%%
+\newcounter{corollary}[section]\setcounter{corollary}{0}
+\renewcommand{\thecorollary}{\textcolor{Blancop}{\thesection.\arabic{corollary}}}
+\newenvironment{corollary}[2][]{%
+	\refstepcounter{corollary}%
+	\ifstrempty{#2}%
+	{\mdfsetup{%
+			frametitle={%
+				\tikz[baseline=(current bounding box.east),outer sep=0pt]
+				\node[anchor=east,rectangle,fill=Amarillop]
+				{\strut \textcolor{Blancop}{Corolario~\thecorollary}};}}
+	}%
+	{\mdfsetup{%
+			frametitle={%
+				\tikz[baseline=(current bounding box.east),outer sep=0pt]
+				\node[anchor=east,rectangle,fill=Amarillop]
+				{\strut \textcolor{Blancop}{Corolario~\thecorollary:~#2}};}}%
+	}%
+	\mdfsetup{innertopmargin=10pt,linecolor=Amarillop,%
+		linewidth=3pt,topline=true,bottomline=false,leftline=false,rightline=false,%
+		frametitleaboveskip=\dimexpr-\ht\strutbox\relax
+	}
+	\begin{mdframed}[]\relax%
+		\label{#2}}{\end{mdframed}}
+%%%%%%%%%%%%%%%% Corolario %%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%% Axioma %%%%%%%%%%%%%%%
+\newcounter{axiom}[section]\setcounter{axiom}{0}
+\renewcommand{\theaxiom}{\textcolor{Blancop}{\thesection.\arabic{axiom}}}
+\newenvironment{axiom}[2][]{%
+	\refstepcounter{axiom}%
+	\ifstrempty{#2}%
+	{\mdfsetup{%
+			frametitle={%
+				\tikz[baseline=(current bounding box.east),outer sep=0pt]
+				\node[anchor=east,rectangle,fill=Rojop]
+				{\strut \textcolor{Blancop}{Axioma}~\theaxiom};}}
+	}%
+	{\mdfsetup{%
+			frametitle={%
+				\tikz[baseline=(current bounding box.east),outer sep=0pt]
+				%\node[anchor=east,rectangle,fill=Rojop]
+				{\strut \textcolor{Blancop}{Axioma}~\theaxiom:~#2};}}%
+	}%
+	\mdfsetup{innertopmargin=10pt,linecolor=Rojop,%
+		linewidth=3pt,topline=true,bottomline=false,leftline=false,rightline=false,%
+		frametitleaboveskip=\dimexpr-\ht\strutbox\relax
+	}
+	\begin{mdframed}[]\relax%
+		\label{#2}}{\end{mdframed}}
+%%%%%%%%%%%%%%%% Axioma %%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%% Propiedad %%%%%%%%%%%%%%%
+\newcounter{property}[section]\setcounter{property}{0}
+\renewcommand{\theproperty}{\textcolor{Blancop}{\thesection.\arabic{property}}}
+\newenvironment{property}[2][]{%
+	\refstepcounter{property}%
+	\ifstrempty{#2}%
+	{\mdfsetup{%
+			frametitle={%
+				\tikz[baseline=(current bounding box.east),outer sep=0pt]
+				\node[anchor=east,rectangle,fill=Moradop]
+				{\strut \textcolor{Blancop}{Propiedad}~\theproperty};}}
+	}%
+	{\mdfsetup{%
+			frametitle={%
+				\tikz[baseline=(current bounding box.east),outer sep=0pt]
+				%\node[anchor=east,rectangle,fill=Moradop]
+				{\strut \textcolor{Blancop}{Propiedad}~\theproperty:~#2};}}%
+	}%
+	\mdfsetup{innertopmargin=10pt,linecolor=Moradop,%
+		linewidth=3pt,topline=true,bottomline=false,leftline=false,rightline=false,%
+		frametitleaboveskip=\dimexpr-\ht\strutbox\relax
+	}
+	\begin{mdframed}[]\relax%
+		\label{#2}}{\end{mdframed}}
+%%%%%%%%%%%%%%%% Propiedad %%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%% Postulado %%%%%%%%%%%%%%%
+\newcounter{postulate}[section]\setcounter{postulate}{0}
+\renewcommand{\thepostulate}{\textcolor{Blancop}{\thesection.\arabic{postulate}}}
+\newenvironment{postulate}[2][]{%
+	\refstepcounter{postulate}%
+	\ifstrempty{#2}%
+	{\mdfsetup{%
+			frametitle={%
+				\tikz[baseline=(current bounding box.east),outer sep=0pt]
+				\node[anchor=east,rectangle,fill=Azulp]
+				{\strut \textcolor{Blancop}{Postulado}~\thepostulate};}}
+	}%
+	{\mdfsetup{%
+			frametitle={%
+				\tikz[baseline=(current bounding box.east),outer sep=0pt]
+				%\node[anchor=east,rectangle,fill=Azulp]
+				{\strut \textcolor{Blancop}{Postulado}~\thepostulate:~#2};}}%
+	}%
+	\mdfsetup{innertopmargin=10pt,linecolor=Azulp,%
+		linewidth=3pt,topline=true,bottomline=false,leftline=false,rightline=false,%
+		frametitleaboveskip=\dimexpr-\ht\strutbox\relax
+	}
+	\begin{mdframed}[]\relax%
+		\label{#2}}{\end{mdframed}}
+%%%%%%%%%%%%%%%% Postulado %%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%% Lema %%%%%%%%%%%%%%%
+\newcounter{motto}[section]\setcounter{motto}{0}
+\renewcommand{\themotto}{\textcolor{Blancop}{\thesection.\arabic{motto}}}
+\newenvironment{motto}[2][]{%
+	\refstepcounter{motto}%
+	\ifstrempty{#2}%
+	{\mdfsetup{%
+			frametitle={%
+				\tikz[baseline=(current bounding box.east),outer sep=0pt]
+				\node[anchor=east,rectangle,fill=Naranjap]
+				{\strut \textcolor{Blancop}{Lema}~\themotto};}}
+	}%
+	{\mdfsetup{%
+			frametitle={%
+				\tikz[baseline=(current bounding box.east),outer sep=0pt]
+				%\node[anchor=east,rectangle,fill=Naranjap]
+				{\strut \textcolor{Blancop}{Lema}~\themotto:~#2};}}%
+	}%
+	\mdfsetup{innertopmargin=10pt,linecolor=Naranjap,%
+		linewidth=3pt,topline=true,bottomline=false,leftline=false,rightline=false,%
+		frametitleaboveskip=\dimexpr-\ht\strutbox\relax
+	}
+	\begin{mdframed}[]\relax%
+		\label{#2}}{\end{mdframed}}
+%%%%%%%%%%%%%%%% Lema %%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%% Solución %%%%%%%%%%%%%%%
+\newenvironment{solution}[2][Soluci\'on]{\textbf{#1 #2} \\}
+%%%%%%%%%%%%%%%% Solución %%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%% Demostración %%%%%%%%%%%%%%%
+\newenvironment{demostration}[2][Demostraci\'on]{\textbf{#1 #2} \\}
+%%%%%%%%%%%%%%%% Demostración %%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%% Ejemplo %%%%%%%%%%%%%%%
+\newenvironment{example}[2][Ejemplo]{\textbf{#1 #2} \\}
+%%%%%%%%%%%%%%%% Ejemplo %%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%% Entornos %%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%% Listings %%%%%%%%%%%%%%%%%%%%
+\lstdefinestyle{BashStyle}{
+	backgroundcolor=\color{BASHwhite},
+	commentstyle=\color{BASHred},
+	keywordstyle=\color{BASHgreen},
+	numberstyle=\color{BASHred},
+	stringstyle=\color{BASHblue},
+	basicstyle=\ttfamily,
+	breakatwhitespace=false,
+	breaklines=true,
+	captionpos=b,
+	keepspaces=true,
+	numbers=left,
+	numbersep=5pt,
+	showspaces=false,
+	showstringspaces=false,
+	showtabs=false,
+	tabsize=4,
+	%frame=left single
+}
+%%%%%%%%%%%%%%%%%%%% Listings %%%%%%%%%%%%%%%%%%%%
