@@ -27,12 +27,3 @@ def e_to_x_power(x,precision):
 	return e
 
 print(e_to_x_power(x,n))
-
-#------------------#
-# Método de Horner #
-#------------------#
-
-#def e_horner_method(x,n):
-#	e = ((x**n)/factorial(n))+(e_horner_method(x,n-1)*x)
-#	return e
-#print(e_horner_method(x,10))
