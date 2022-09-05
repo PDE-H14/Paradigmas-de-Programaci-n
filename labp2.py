@@ -1,3 +1,7 @@
+#----------------------------------#
+# Porfirio Damián Escamilla Huerta #
+#----------------------------------#
+
 #---------------------#
 # Conjuntos en python #
 #---------------------#
@@ -115,3 +119,19 @@ print ("I" in romanNums)
 print("X" in romanNums)
 print("XX" not in romanNums)
 
+#----------------------------------#
+# Porfirio Damián Escamilla Huerta #
+#----------------------------------#
+
+#---------------------------------------------#
+#                    Listas                   #
+# Las listas pueden ser de objetos diferentes #
+#---------------------------------------------#
+
+miPrimerLista =[] # Lista vacía
+print(miPrimerLista)
+
+#
+# list: Hacer una lista 
+# range(i, j): Secuencia desde i hasta j-1
+#
