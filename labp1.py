@@ -9,10 +9,11 @@
 print(2+3)
 print(2*3)
 print(2/3)
+print(7//3)
 print(2**10)
 print(2**0.5) #raíz cuadrada
 print(10%2)
-print(10%0.1) #esclusivo de python
+print(10%0.2) #esclusivo de python
 
 #==========================================#
 # Para saber el tipo de objeto se usa type #
@@ -164,8 +165,8 @@ print(round(3.14159,4))
 #==========================#
 
 parrafo="""
-           En el bosque de la china
-           La chinita se perdió
+En el bosque de la china,
+  La chinita se perdió
         """
 print(parrafo)
 

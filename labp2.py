@@ -129,9 +129,76 @@ print("XX" not in romanNums)
 #---------------------------------------------#
 
 miPrimerLista =[] # Lista vacía
-print(miPrimerLista)
+print("Lista vacía",miPrimerLista)
 
-#
-# list: Hacer una lista 
-# range(i, j): Secuencia desde i hasta j-1
-#
+#------------------#
+# Llenado de lista #
+#------------------#
+
+miPrimerLista = [1,"Javier",1.34,"Bosco","Angel","Abigail",True]
+print("Lista definida:",miPrimerLista)
+
+#------------------------------------------#
+#           list: Hacer una lista          # 
+# range(i, j): Secuencia desde i hasta j-1 #
+#------------------------------------------#
+
+nums = list(range(1,61))
+print("Lista de un rango de números",nums)
+for i in nums:
+    print(i)
+
+#--------------------------------------#
+# Incluir nuevos elementos en la lista #
+#--------------------------------------#
+
+nums.append(61)
+nums.append(62)
+nums.append(61)
+print("Lista con números agregados:",nums)
+
+#------------------------------#
+# Quitar elementos de la lista #
+#------------------------------#
+
+nums.remove(61)
+print("Lista de números quitando el valor 61", nums) # Elimina la primer coincidencia
+
+#------------------------------#
+# Quitar elemento con índice i #
+#------------------------------#
+
+i = 61
+del nums[i]
+print("Lista de números sin el elemnto con pocisión 61",nums)
+
+#-----------------#
+# Borrar la lista #
+#-----------------#
+
+del nums
+
+#--------------#
+# Sumar listas #
+#--------------#
+
+L1 = [1, 2, 3]
+L2 = [4, 5, 6]
+print("Suma de listas:",L1+L2)
+
+#----------------#
+# Llenado a mano #
+#----------------#
+
+potencial = []
+
+for i in range(0,10000):
+    potencial.append(float(i))
+print(potencial[100])
+
+#--------------------------------#
+# Generar una tupla con la lista #
+#--------------------------------#
+
+potencial = tuple(potencial)
+print(potencial[100])
