@@ -27,3 +27,5 @@ def e_to_x_power(x,precision):
 	return e
 
 print(e_to_x_power(x,n))
+
+
