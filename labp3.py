@@ -278,3 +278,22 @@ print(suma(1,2,3))
 sumas = lambda *x: x[0]+x[1]+x[2]+x[3]
 print(sumas(1,2,3,4))
 
+#-----------------------------------------#
+#        Uso de una función anónima       #
+# El argumento va afuera entre paréntesis #
+#-----------------------------------------#
+
+print((lambda x : x * x)(6)) # Función anónima
+
+#-----------------------------#
+# Función con variable global #
+#      ¡EVITE EL EXCESO!      #
+#-----------------------------#
+
+name = "Steve"
+def greet():
+    global name # Para utilizar una variable global (que viene del bloque)
+    name = "Bill"
+    print("Hello ", name)
+
+greet()
