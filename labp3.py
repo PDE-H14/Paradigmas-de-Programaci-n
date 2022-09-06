@@ -115,3 +115,86 @@ for pair in numNames.items():
 
 for k,v in numNames.items():
     print("key =", k, ", value =",v)
+	
+#----------------------------------#
+# Porfirio Damián Escamilla Huerta #
+#----------------------------------#
+
+#-----------------#
+# Primera función #
+#-----------------#
+
+def saludo():
+	#------------------------------------#
+	# Documentación rápida de la función #
+	#------------------------------------#
+	"""Esta función saluda"""
+	print("¡Quiúboles, ¿cómo estás?!")
+	
+#-----------------------#
+# Llamado de la función #
+#-----------------------#
+saludo()
+
+#------------------------------#
+# Se ejecuta pero no se asigna #
+#------------------------------#
+salida = saludo()
+
+#------------------#
+# Esto no funciona #
+#------------------#
+
+print(salida)
+
+#-----------------------#
+# Mostrar documentación #
+#-----------------------#
+
+#help(saludo)
+
+#-----------------------#
+# Función con argumento #
+#-----------------------#
+
+def salu2(numbre):
+	"""Esta función te saluda por tu nombre"""
+	print("¡Qué onda ese", nombre,"!")
+
+salu2("Julián")
+salu2("Ángel")
+
+#-----------------------------------------#
+#      Ahorrar trabajo del intérprete     #
+# nombre:str la variable nombre es un str #
+#-----------------------------------------#
+
+def saludos(nombre:str):
+	"""Esta función te saluda por tu nombre estrictamente"""
+	print("¡Qué onda ese", nombre,"!")
+saludos("Julián")
+a = 123
+print(type(a)) 
+
+#------------------------------#
+# Función con mchos argumentos #
+#------------------------------#
+
+def saludos_multiples(nombre1, nombre2, nombre3):
+	"""Esta función te saluda a tres personas al mismo tiempo"""
+	print("¡Hola", nombre1, ",", nombre2, "y", nombre3, "!")
+saludos_multiples("Hugo","Paco","Luis")
+
+#--------------------------------------------#
+# Función con cualquier número de argumentos #
+#--------------------------------------------#
+
+def muchos_saludos(*nombres):
+	"""Está función saluda a todos los que quieras"""
+	i = 0
+	#---------------------------------#
+	# end= es para ponerlo de corrido #
+	#---------------------------------#
+	print("Hola ", end="")
+	while len(nombres) > i:
+	
