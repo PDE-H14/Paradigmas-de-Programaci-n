@@ -92,17 +92,7 @@ print("Método propia (área)", triángulo2.área())
 
 
 class Triángulo_rectángulo(Triángulo):
-    def __init__(self, catetoA: float = 0, catetoB: float = 0, hipotenusa: float = 0, ánguloOpuestoA: float = 0, ánguloOpuestoB: float = 0):
-        if ánguloOpuestoA or ánguloOpuestoB == 0:
-            if ánguloOpuestoA == 0:
-                 super().__init__(catetoA, catetoB, hipotenusa, 90, 90-ánguloOpuestoB, ánguloOpuestoB)
-            elif ánguloOpuestoB == 0:
-                 super().__init__(catetoA, catetoB, hipotenusa, 90, ánguloOpuestoA, 90-ánguloOpuestoA)
-            else:
-                if catetoA or catetoB == 0:
-                    if catetoA == 0:
-                        
-        super().__init__(catetoA, catetoB, hipotenusa, 90, ánguloOpuestoA, ánguloOpuestoB)
+    
     def área(self):
         área = (self.ladoA*self.ladoB)/2
         return área
