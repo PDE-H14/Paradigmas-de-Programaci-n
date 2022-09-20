@@ -28,11 +28,11 @@ print(triángulo1.es_triángulo())
 print(type(triángulo1.perímetro()))
 
 class Triángulo_equilátero(Triángulo):
-    def __init__(self, lado);
-        super.__init__(lado, lado, lado, 60, 60, 60)
+    def __init__(self, lado=1):
+        super().__init__(lado, lado, lado, 60, 60, 60)
     def área(self):
         área = self.lado/2 * self.lado*(3**1/2)/2
         return área
 
-triángulo_equilátero(3)
-print(triángulo_equilátero().perímetro())
+triángulo2 = Triángulo_equilátero(3)
+print(triángulo2.perímetro())
