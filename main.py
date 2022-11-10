@@ -17,7 +17,7 @@ try:
 #---------------------------------------------#
 
 except Exception as e:
-    print("Error "+str(e))
+    print("Error PDEH "+str(e))
 
 #------------------------------------#
 # Error por usar un atributo privado #
@@ -25,8 +25,8 @@ except Exception as e:
 
 try:
     print(cliente.__nombres)
-except Exception as e:
-    print("Error "+str(e))
+except Exception as ex:
+    print("Error PDEH "+str(ex))
 
 #----------------#
 # Forma correcta #
