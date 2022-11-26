@@ -1,21 +1,25 @@
-#
-# Gráficos usando la tortuga que pinta al caminar
-#
+import tkinter as TK #Agregue esta linea porque si no no corria el programa en mi computadora
+
+# Si el error persiste ejecute 'sudo apt-get install python3-tk' para Ubuntu
+
+#-------------------------------------------------#
+# Gráficos usando la tortuga que pinta al caminar #
+#-------------------------------------------------#
 
 import turtle
 tortuga = turtle.Turtle()
 tortuga.left(90)
 tortuga.speed(500)
 
-#
-# Con ángulos de 90 es un árbol H
-#
+#---------------------------------#
+# Con ángulos de 90 es un árbol H #
+#---------------------------------#
 
 angulo: float = 90
 
-#
-# El árbol se construye con recursividad 
-#
+#----------------------------------------#
+# El árbol se construye con recursividad #
+#----------------------------------------#
 
 def arbol(i:float, angulo:float):
     if i<10:

@@ -1,14 +1,16 @@
 import random
 import matplotlib.pyplot as plt
-import matplotlib.patchesa as patches
+import matplotlib.patches as patches
+
 
 class Particula():
-    def __init__(self, x:float, y:float):
+    def __init__(self, x: float, y: float):
         self.x = x
         self.y = y
 
+
 class Nodo():
-    def __init__(self, x0:float, y0:float, w:float, h:float, particulas):
+    def __init__(self, x0: float, y0: float, w: float, h: float, particulas):
         self.x0 = x0
         self.y0 = y0
         self.ancho = w
@@ -25,13 +27,83 @@ class Nodo():
     def get_particulas(self):
         return self.particulas
 
-def subdivision_recursiva(nodo:Nodo, k:int):
-    if len(nodo.particulas)<=k:
+
+def subdivision_recursiva(nodo: Nodo, k: int):
+    if len(nodo.particulas) <= k:
         return
     w_ = float(0.5*nodo.ancho)
     h_ = float(0.5*nodo.alto)
 
     p = cuantas_contiene(nodo.x0, nodo.y0, w_, h_, nodo.particulas)
     nodo.x1 = Nodo(nodo.x0, nodo.y0, w_, h_, p)
-    subdividion_recursiva(nodo.x1, k)
+    subdivision_recursiva(nodo.x1, k)
 
+    p = cuantas_contiene(nodo.x0, nodo.y0+h_, w_, h_, nodo.particulas)
+    nodo.x2 = Nodo(nodo.x0, nodo.y0+h_, w_, h_, p)
+    subdivision_recursiva(nodo.x2, k)
+
+    p = cuantas_contiene(nodo.x0+w_, nodo.y0, w_, h_, nodo.particulas)
+    nodo.x3 = Nodo(nodo.x0+w_, nodo.y0, w_, h_, p)
+    subdivision_recursiva(nodo.x3, k)
+
+    p = cuantas_contiene(nodo.x0+w_, nodo.y0+h_, w_, h_, nodo.particulas)
+    nodo.x4 = Nodo(nodo.x0+w_, nodo.y0+h_, w_, h_, p)
+    subdivision_recursiva(nodo.x4, k)
+
+    nodo.hijos = [nodo.x1, nodo.x2, nodo.x3, nodo.x4]
+
+
+def cuantas_contiene(x: float, y: float, w: float, h: float, particulas):
+    pts = []
+    for particula in particulas:
+        if particula.x >= x and particula.x <= x+w and particula.y >= y and particula.y <= y+h:
+            pts.append(particula)
+    return pts
+
+
+def encontrar_hijos(nodo: Nodo):
+    if not nodo.hijos:
+        return [nodo]
+    else:
+        hijos = []
+        for hijo in nodo.hijos:
+            hijos += (encontrar_hijos(hijo))
+    return hijos
+
+
+class QTree():
+    def __init__(self, k: int, n: int):
+        self.umbral = k
+        self.particulas = [Particula(random.uniform(
+            0, 1000), random.uniform(0, 1000)) for x in range(n)]
+        self.root = Nodo(0, 0, 1000, 1000, self.particulas)
+
+    def add_particula(self, x: float, y: float):
+        self.particulas.append(Particula(x, y))
+
+    def get_particulas(self):
+        return self.particulas
+
+    def subdividir(self):
+        subdivision_recursiva(self.root, self.umbral)
+
+    def visualizacion(self):
+        fig = plt.figure(figsize=(24, 16))
+        plt.title("QuadTree")
+        c = encontrar_hijos(self.root)
+        print("Número de segmentos: %d" % len(c))
+        areas = set()
+        for el in c:
+            areas.add(el.ancho*el.ancho)
+            print("Mínima área por segmento: %.3f unidades" % min(areas))
+        for hi in c:
+            plt.gcf().gca().add_patch(patches.Rectangle([hi.x0,hi.y0],hi.ancho,hi.alto,fill=False))
+        x = [particula.x for particula in self.particulas]
+        y = [particula.y for particula in self.particulas]
+        plt.plot(x, y, 'bo') # Muestra las partivulas como puntos azules
+        plt.show()
+        return
+
+qtree = QTree(5, 1000)
+qtree.subdividir()
+qtree.visualizacion()
