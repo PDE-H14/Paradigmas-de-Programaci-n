@@ -8,7 +8,7 @@ import math
 # e^x como polinomio factorizado #
 #--------------------------------#
 
-x = -10
+x = 1
 
 n = 1000000
 
