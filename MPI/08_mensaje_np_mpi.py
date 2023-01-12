@@ -26,6 +26,7 @@ if __name__ == "__main__":
     #--------------------------#
 
     if rank == 1:
+		# numpy acepta como dtype i o int
         data = np.empty(10,dtype='int')
         comm.Recv([data, MPI.INT], source=0, tag=77)
         print(data)

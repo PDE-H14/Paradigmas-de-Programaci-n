@@ -27,8 +27,8 @@ if __name__ == "__main__":
 
     if rank == 0:
         randNum = zeroArray = np.random.random_sample(1)
-        print("Proceso", rank, "generó", randNum[0])
+        print("Proceso", rank, "generó", randNum[0]) #Este randNum lo genera el uno
         comm.Isend(randNum, dest=1)
-        req = comm.Irecv(randNum, source=1)
+        req = comm.Irecv(randNum, source=1) # Aquí guarda el ranNum que envia el cero
         req.Wait()
         print("Proceso", rank, "recibió el número", randNum[0])
