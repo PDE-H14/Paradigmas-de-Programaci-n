@@ -1,4 +1,4 @@
-from ampi4py import MPI
+from mpi4py import MPI
 import numpy as np 
 
 comm = MPI.COMM_WORLD
@@ -22,3 +22,20 @@ if rank == 0:
 	# dtype es el tipo de dato (i) es entero #
 	#----------------------------------------#
 	recvarray = np.empty([size, n], dtype='i')
+
+#
+# Gather es rápido para numpy
+# enviar datos al proceso root
+#
+comm.Gather(sendarray, recvarray, root = 0)
+
+if rank == 0:
+	for i in range(size):
+		#
+		# Revisar por fila la matriz
+		# : significa todos los elementos de esa dimensión 
+		# allclose es un método de numpy que compara los elementos
+		#
+		assert np.allclose(recvarray[i, :], i)
+
+print(recvarray)
