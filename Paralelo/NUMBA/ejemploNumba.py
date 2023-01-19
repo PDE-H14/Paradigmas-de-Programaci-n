@@ -37,4 +37,3 @@ start = time.time()
 lento(x)
 end = time.time()
 print("Tiempo de ejecución en python puro = %s" % (end - start))
-

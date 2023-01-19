@@ -3,11 +3,11 @@ import numpy as np
 import time
 
 def my_function(i, param1, param2, param3):
-	 # calcula un polinomio
-	 result = param1**3+param2**2+param3
-	 # se hace tonto 2 segundos 
-	 time.sleep(2)
-	 return (i, result)
+	# calcula un polinomio
+	result = param1**3+param2**2+param3
+	# se hace tonto 2 segundos 
+	time.sleep(2)
+	return (i, result)
 
 def get_result(result):
 	# Se inscriben en la lista global
